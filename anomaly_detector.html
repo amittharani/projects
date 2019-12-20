@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--<title>Helium - Bootstrap 4 Onepage Template</title> -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" >
+    <!-- Font -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <!-- Slicknav -->
+    <link rel="stylesheet" type="text/css" href="css/slicknav.css">
+    <!-- Owl carousel -->
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.theme.css">
+    <!-- Animate -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- Extras Style -->
+    <link rel="stylesheet" type="text/css" href="css/extras.css">
+    <!-- Responsive Style -->
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+  </head>
+  <body>
+
+    <!-- Header Area wrapper Starts -->
+    <header id="header-wrap">
+      <!-- Navbar Start -->
+      <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar indigo">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              <span class="icon-menu"></span>
+              <span class="icon-menu"></span>
+              <span class="icon-menu"></span>
+            </button>
+            <a href="portfolio.html" class="navbar-brand"><img src="img/amit_logo.png" alt=""></a>
+          </div>
+          <div class="collapse navbar-collapse" id="main-navbar">
+            <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix">
+              <!-- <li class="nav-item active">
+                <a class="nav-link" href="#home-slider">
+                  Home
+                </a>
+              </li> -->
+             
+              <li class="nav-item">
+                <a class="nav-link" href="portfolio.html">
+                  Portfolio
+                </a>
+              </li>
+             
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Start
+        <ul class="mobile-menu navbar-nav">
+          <li>
+            <a class="page-scroll" href="#sliders">
+              Home
+            </a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#portfolio">
+              Portfolio
+            </a>
+          </li>
+        
+        </ul>
+         Mobile Menu End -->
+
+      </nav>
+      <!-- Navbar End -->
+
+
+<div class="home-slider" role="listbox">
+                  <div class="carousel-item active">
+                    <img src="img/slider/pbg.jpg" alt="">
+                    <div class="carousel-caption">
+                      <h3 class="slide-title animated fadeInDown"><span></span></h3>
+               <!--       <h5 class="slide-text animated fadeIn">Lorem ipsum dolor sit amet, consectetuer adipiscing elit<br> Curabitur ultricies nisi Nam eget dui. Etiam rhoncus</h5> -->
+                   </div>
+                  </div>
+	  
+    </header>
+    <!-- Header Area wrapper End -->
+
+	<section id="work body" class="contact-form section-padding"  style="background-color:#fbfbfb;">
+<div style="align:center;margin-left:17%;margin-right:17%;"> <h3 align="center">Anomaly Detector</h3> <br>
+<br>A big piece of the fraud & abuse pie at Swiggy, is restaurant fraud.
+<br>Restaurants engage with swiggy on a per-order commission criteria along with incentives on high volume and quality. 
+<br>In order to scale faster, swiggy often seeds discounts on orders from its own pockets. Some restaurants see the swiggy funded discounts as an opportunity- they work out the math on delivery charge, commission, discounts & monthly incentives, placing the orders themselves to juice more money from the system.
+<br> It goes beyond that, for some. In anticpation of demand for some dishes, they'd place the orders at restaurant's own address and serve these items to dining customers.
+<br><br>We had built our fraud detection system before with robust rules, incorporating everything we knew on how each entity abuses the system. But such a system is as good as the KNOWN part of the problem.
+<br>In an ever evolving problem like fraud, we frequently discover novel abuse cases, making us wonder how much of the abuse is yet to be solved for!
+ One way to treat the unknown, is to look for anomalies in business parameters, instead of pre-defined rules that only detect known use-cases.
+<br><br> For our anomaly detection framework, we incorporated an Exponential Weighted moving average (EWMA) statistic that flags any movement beyond the thresholds.
+It accounts for business volatility by giving importance to the more recent values across time.
+<br><br>Consider the below chart as an example:<br><br>
+<img src="img/portfolio/ewma.gif" style="display:block;margin-left: auto; margin-right:auto;max-width:70%"" alt="text"><br>
+<br> With 'x' as values on the graph, <br>Moving average values (EWMAs) are represented as the green curve, <br>and blue lines symbolizing the thresholds.
+<br><br><b>Calculation:</b>
+<br>EWMA<sub>t</sub> = λY<sub>t</sub> + (1−λ)EWMA<sub>t-1</sub>
+<br><br>where
+<br>EWMA<sub>0</sub> is the mean of historical data
+<br>Y<sub>t</sub> is the observation at time t
+<br>0<λ≤1 is a constant that represents the recency factor
+<br><br>The control limits (thresholds) are calculated as:
+<br>UCL = EWMA<sub>0</sub> + k.s<sub>ewma</sub>
+<br>LCL = EWMA<sub>0</sub> - k.s<sub>ewma</sub>
+<br><br>with 
+s<sup>2</sup><sub>ewma</sub> as the variance of EWMA statistic, derived from s<sup>2</sup>,  variance of historical data
+<br><br>s<sup>2</sup><sub>ewma</sub> = s<sup>2</sup>.λ/(2-λ)
+<br><br><b>Methodology:</b>
+<br>Use cases with a hypothesis in place- We relied on signals like time taken from DE Assignment to arrival at restaurant, dish preparation time, time taken from order pickup to delivery, Last mile distance, etc for indicating Restaurant-DE collusion.<br>An abberation in all the signals indicate that:
+<br>a.) DE is already at the restaurant, since he's aware of the upcoming order.
+<br>b.) Food isn't actually being prepared. These are shell orders.
+<br>c.) DE is marking delivery soon after pickup as either the delivery address is also the restaurant location <br> or, he doesn't actually need to deliver at the dummy customer location.
+<br>
+<br>For restaurant placing self orders with or without DE involvement, we looked at signals like
+<br>time between order pick up and delivery
+<br>average of max #orders from the same customers
+<br>Average discount applied
+<br>ordered to acceptance time
+<br>speed of last mile delivery
+<br>and various other intuitive as well as non-intuitive metrics, for unprejudiced insights.
+<br><br><b>Results:</b>
+<br>The framework helped us highlight restaurants engaging in fraudulent activities; but sometimes, the benefits cascaded in other verticals- like CX.
+<br>An abberation in last mile increase happened when 'Long distance' orders were enabled on the platform. The Last Mile abberation was correlated with a surge in bad rated orders. Further investigation lead to the conclusion that long distance should factor in the item's cuisines too; not just the primary cuisine type of the restaurant. Consider the state of an ice-cream ordered from a pizza place, travelling 6 miles before reaching the doorstep.
+</div>
+	</section>
+    <!-- Contact Form Section Start -->
+    <section id="contact" class="contact-form section-padding" align="center">
+  
+
+          <div class="col-lg-12 col-md-4 col-xs-12">
+            <h4 class="contact-info-title text-center">Contact Information</h4>
+            <div class="contact-info">            
+              <div class="tel-info">
+                <a href="tel:+91 8310658475"><i class="lni-phone icons cyan-color contact-info-icon"></i>+91 8310658475</a>
+              </div>
+              <a href="mailto:amytthourani@gmail.com"><i class="lni-envelope icons cyan-color contact-info-icon"></i>amytthourani@gmail.com</a>
+              <ul class="social-links">
+                <li>
+                  <a href="https://www.facebook.com/amittharani.754" class="fa fa-facebook"></a>
+                </li>              
+                <li>
+                  <a href="https://www.youtube.com/user/bajaj355" class="fa fa-youtube"></a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/amittharani" class="fa fa-linkedin"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Form Section End -->
+
+
+    <!-- Go to Top Link -->
+    <a href="#" class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </a>
+    
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="loader" id="loader-1"></div>
+    </div>
+    <!-- End Preloader -->
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.mixitup.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/jquery.nav.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/form-validator.min.js"></script>
+    <script src="js/contact-form-script.js"></script>
+    <script src="js/main.js"></script>
+      
+  </body>
+</html>

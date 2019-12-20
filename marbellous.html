@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--<title>Helium - Bootstrap 4 Onepage Template</title> -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" >
+    <!-- Font -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <!-- Slicknav -->
+    <link rel="stylesheet" type="text/css" href="css/slicknav.css">
+    <!-- Owl carousel -->
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.theme.css">
+    <!-- Animate -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- Extras Style -->
+    <link rel="stylesheet" type="text/css" href="css/extras.css">
+    <!-- Responsive Style -->
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+	
+	
+  </head>
+  <body>
+
+    <!-- Header Area wrapper Starts -->
+    <header id="header-wrap">
+      <!-- Navbar Start -->
+      <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar indigo">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              <span class="icon-menu"></span>
+              <span class="icon-menu"></span>
+              <span class="icon-menu"></span>
+            </button>
+            <a href="portfolio.html" class="navbar-brand"><img src="img/amit_logo.png" alt=""></a>
+          </div>
+          <div class="collapse navbar-collapse" id="main-navbar">
+            <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix">
+              <!-- <li class="nav-item active">
+                <a class="nav-link" href="#home-slider">
+                  Home
+                </a>
+              </li> -->
+             
+              <li class="nav-item">
+                <a class="nav-link" href="portfolio.html">
+                  Portfolio
+                </a>
+              </li>
+             
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Start
+        <ul class="mobile-menu navbar-nav">
+          <li>
+            <a class="page-scroll" href="#sliders">
+              Home
+            </a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#portfolio">
+              Portfolio
+            </a>
+          </li>
+        
+        </ul>
+         Mobile Menu End -->
+
+      </nav>
+      <!-- Navbar End -->
+<div class="home-slider" role="listbox">
+                  <div class="carousel-item active">
+                    <img src="img/slider/pbg.jpg" alt="">
+                    <div class="carousel-caption">
+                      <h3 class="slide-title animated fadeInDown"><span></span></h3>
+               <!--       <h5 class="slide-text animated fadeIn">Lorem ipsum dolor sit amet, consectetuer adipiscing elit<br> Curabitur ultricies nisi Nam eget dui. Etiam rhoncus</h5> -->
+                   </div>
+                  </div>
+	  
+    </header>
+    <!-- Header Area wrapper End -->
+
+	<section id="work body" class="contact-form section-padding" style="background-color:#fbfbfb;">
+<div style="margin-left:17%;margin-right:17%;"><h3 align="center">Marbellous game</h3> <img src="img/portfolio/marbellous.gif"  style="display: block;margin-left: auto; margin-right:auto;max-width:60%" alt="text">
+<br><br>Marbellous is casual puzzle game where the player interacts with marbles on a restricted tile platform. The goal is to align similar colored marbles in minimum moves possible to attain a higher score.
+<br><br><h5>Game Abstract</h5>
+		Design a windows application with following attributes:
+		<br>1. Render balls, defined by color but sharing common properties
+		<br>2. A tile based platform for the movement of balls
+		<br>3. Rules for ball to ball and ball to boundary collision
+		<br>4. Game loop script to accept direction inputs and move balls
+		<br>5. Moves count and scoring mechanism
+		<br>6. Load maps for different levels
+		
+		<br><br><h5>Programming</h5>
+		The game was programmed using C++ language. I used SFML (Simple and Fast Multimedia Library) for windows, to accept user inputs, render 2D graphics (textures, sprites and text) and integrate music.
+		<br>Microsoft Visual Studio was the choice of IDE/code editor for the game development.
+		<br><br><b>Marble class properties:</b> Postition, marble-type, sprite(image)and direction.
+		<br><b>Loading Map:</b> A 2D matrix of 1s and 0s is used for permeable and non-permeable tiles.
+		<br><b>Loading Marbles:</b> A text file with #marbles, moves count for each rating, and a 2D matrix with co-ordinates & marble-type for all marbles.	
+<br><br>
+<img src="img/portfolio/marbellous_level.png"  style="display: block;margin-left: auto; margin-right: auto;">
+<br><br><b>Collision Logic</b>		
+<br><br>
+<img src="img/portfolio/marbellous_collision.png"  style="display: block;margin-left: auto; margin-right: auto;">
+<br><pre >If(collision)
+	{
+		If(color_matches)
+			Remove marbles from map.
+
+		Else
+			Set movement_speed = 0
+}
+</pre>
+<br><br><b>Game code:</b> You can check out the game code at this <a href="https://github.com/amittharani/marbellous-sfml/blob/master/ConsoleApplication2/Game.cpp">link</a>, and the project details on my github profile <a href="https://github.com/amittharani/marbellous-sfml/" class="fa fa-github"></a>. 	
+<br><br><br>
+<div style="width:60%;margin-left: auto; margin-right: auto;position:relative;padding-top:51.5%;">
+<iframe style="width:100%;height:100%;position:absolute;top:0;left:0;" src="https://www.youtube.com/embed/cLdF7otQXpo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<p align="center">Download the game from <a href="https://drive.google.com/file/d/13zrPYlsE65YvHmq41x-NptAOTvTIbChw/">here</a>
+</div>
+	</section>
+    <!-- Contact Form Section Start -->
+    <section id="contact" class="contact-form section-padding" align="center">
+  
+
+          <div class="col-lg-12 col-md-4 col-xs-12">
+            <h4 class="contact-info-title text-center">Contact Information</h4>
+            <div class="contact-info">            
+              <div class="tel-info">
+                <a href="tel:+91 8310658475"><i class="lni-phone icons cyan-color contact-info-icon"></i>+91 8310658475</a>
+              </div>
+              <a href="mailto:amytthourani@gmail.com"><i class="lni-envelope icons cyan-color contact-info-icon"></i>amytthourani@gmail.com</a>
+              <ul class="social-links">
+                <li>
+                  <a href="https://www.facebook.com/amittharani.754" class="fa fa-facebook"></a>
+                </li>
+                
+                <li>
+                  <a href="https://www.youtube.com/user/bajaj355" class="fa fa-youtube"></a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/amittharani" class="fa fa-linkedin"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Form Section End -->
+
+
+    <!-- Go to Top Link -->
+    <a href="#" class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </a>
+    
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="loader" id="loader-1"></div>
+    </div>
+    <!-- End Preloader -->
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.mixitup.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/jquery.nav.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/form-validator.min.js"></script>
+    <script src="js/contact-form-script.js"></script>
+    <script src="js/main.js"></script>
+      
+  </body>
+</html>
