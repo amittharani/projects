@@ -100,42 +100,56 @@
     <!-- Header Area wrapper End -->
 
 	<section id="work body" class="contact-form section-padding" style="background-color:#fbfbfb;">
-<div style="margin-left:17%;margin-right:17%;"><h3 align="center">Marbellous game</h3> <img src="img/portfolio/marbellous.gif"  style="display: block;margin-left: auto; margin-right:auto;max-width:60%" alt="text">
-<br><br>Marbellous is casual puzzle game where the player interacts with marbles on a restricted tile platform. The goal is to align similar colored marbles in minimum moves possible to attain a higher score.
-<br><br><h5>Game Abstract</h5>
-		Design a windows application with following attributes:
-		<br>1. Render balls, defined by color but sharing common properties
-		<br>2. A tile based platform for the movement of balls
-		<br>3. Rules for ball to ball and ball to boundary collision
-		<br>4. Game loop script to accept direction inputs and move balls
-		<br>5. Moves count and scoring mechanism
-		<br>6. Load maps for different levels
+<div style="margin-left:17%;margin-right:17%;"><h3 align="center">Marbellous Game</h3> <img src="img/portfolio/marbellous.gif"  style="display: block;margin-left: auto; margin-right:auto;max-width:60%" alt="text">
+<br><br>Marbellous is a casual puzzle game where the player interacts with marbles on a restricted tile platform. The goal is to align similar colored marbles in minimum moves possible to attain a higher score.
+<br><br><h5>Abstract:</h5>
+		Video games are essentially a set of rules governing a player's interaction with the system, attemptng to solve a puzzle, accomplish certain goals, achieve a high score or immerse in a story.
+		Marbellous is a puzzle game designed as a windows application, which lets the players move marbles on a tile platform.
+		<br><br>The system has three rules:
+		<br>1. Move all marbles in the direction specified by the player.
+		<br>2. Stop the marble on collision with a boundary.
+		<br>3. On encounter with another marble,
+		<br>&nbsp &nbsp Stop the marble if they don't share the color.
+		<br>&nbsp &nbsp Remove both marbles from the platform, if they do.
 		
+		<br><br>The goal is to remove all the marbles from the platform to complete a level and the scoring mechanism dictates the minimum moves for each rating.
+		<br>This is an early sketch I used, to demonstrate the game mechanics before commencing the development.
+		<br><br><img src="img/portfolio/marbellous comic strip.png"  style="display: block;margin-left: auto; margin-right:auto;max-height:100vh" alt="text"><br>
+				
 		<br><br><h5>Programming</h5>
 		The game was programmed using C++ language. I used SFML (Simple and Fast Multimedia Library) for windows, to accept user inputs, render 2D graphics (textures, sprites and text) and integrate music.
 		<br>Microsoft Visual Studio was the choice of IDE/code editor for the game development.
-		<br><br><b>Marble class properties:</b> Postition, marble-type, sprite(image)and direction.
-		<br><b>Loading Map:</b> A 2D matrix of 1s and 0s is used for permeable and non-permeable tiles.
-		<br><b>Loading Marbles:</b> A text file with #marbles, moves count for each rating, and a 2D matrix with co-ordinates & marble-type for all marbles.	
+		<br> The program utilizes key concepts of Object Oriented Programming (OOPs) like inheritance, abstraction, and encapsulation. Entities called 'Class' wrap data and code into a cohesive unit.
+		For example, the <b>Marble Class </b> has properties like Postition, marble-type, sprite(image)and direction.
+		<br><br> Once all classes and functions (movement, collision check, score update, class field updates, etc) are defined, a looping script called the <b>game loop</b> is created that accepts user inpts and run through all the functions like moving marbles and checking collisions, till a stop condition is satisfied, like level completion or out of moves.
+		<br><br><b>Collision Logic</b>		
+		<br><br>
+		<img src="img/portfolio/marbellous_collision.png"  style="display: block;margin-left: auto; margin-right: auto;">
+		<br><br> Collision between marbles:
+		<br><pre >If(collision)
+			{
+				If(color_matches)
+					Remove marbles from map.
+		
+				Else
+					Set movement_speed = 0
+		}
+		</pre>
+		<br><br><b>Loading Map:</b> A 2D matrix of 1s and 0s is used for permeable and non-permeable tiles.
+		<br><br><b>Loading Marbles:</b> A text file with #marbles, moves count for each rating, and a 2D matrix with co-ordinates & marble-type for all marbles.	
 <br><br>
 <img src="img/portfolio/marbellous_level.png"  style="display: block;margin-left: auto; margin-right: auto;">
-<br><br><b>Collision Logic</b>		
-<br><br>
-<img src="img/portfolio/marbellous_collision.png"  style="display: block;margin-left: auto; margin-right: auto;">
-<br><pre >If(collision)
-	{
-		If(color_matches)
-			Remove marbles from map.
-
-		Else
-			Set movement_speed = 0
-}
-</pre>
 <br><br><b>Prototype to Final build:</b>
+<br>Once the key components and game mechanics started working, I made a few important additions and enhancements.
+<br>Adding the scoring mechanism.
+<br>Updating native renders to marble sprites.
+<br>Adding game menu, level selection and game saves.
+<br>Adding shadows to the tiles.
 <br><br>
 <img src="img/portfolio/marbellous-prototype.png" style="width:350px;height:330px;margin-left:auto;margin-right:5%" alt="text"> 
 <img src="img/portfolio/marbellous-shipped.png" style="width:350px;height:330px;margin-left:auto;margin-right:auto;" alt="text">
 <br><br><b>Game code:</b> You can check out the game code at this <a href="https://github.com/amittharani/marbellous-sfml/blob/master/ConsoleApplication2/Game.cpp">link</a>, and the project details on my github profile <a href="https://github.com/amittharani/marbellous-sfml/" class="fa fa-github"></a>. 	
+<br> Watch the game teaser below, or on <a href="https://www.youtube.com/watch?v=cLdF7otQXpo" class="fa fa-youtube"></a>.
 <br><br><br>
 <div style="width:60%;margin-left: auto; margin-right: auto;position:relative;padding-top:51.5%;">
 <iframe style="width:100%;height:100%;position:absolute;top:0;left:0;" src="https://www.youtube.com/embed/cLdF7otQXpo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
